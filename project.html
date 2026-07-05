@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Procurement Tracker — Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="brand-mark">PT</span> Procurement Tracker</div>
+    <button id="logout-btn" class="btn btn-ghost">Log out</button>
+  </div>
+
+  <main class="page">
+    <a href="dashboard.html" class="back-link">&larr; All projects</a>
+
+    <div class="project-title-row">
+      <h1 id="project-title" contenteditable="true" spellcheck="false"></h1>
+      <span id="project-stamp" class="sent-stamp"></span>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Vendor email tracker</h2>
+        <span class="section-hint">▲ upvote to advance · ▼ downvote to decline · ↺ reset</span>
+      </div>
+      <div class="vendor-box">
+        <div id="vendor-list"></div>
+        <form id="add-vendor-form" class="add-vendor-form">
+          <input type="email" id="vendor-email-input" placeholder="vendor@company.com" required />
+          <button type="submit" class="btn btn-primary">+ Add vendor</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Vendor comparison</h2>
+        <span class="section-hint">Click any cell to edit</span>
+      </div>
+      <div class="table-scroll">
+        <table class="compare-table" id="compare-table"></table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

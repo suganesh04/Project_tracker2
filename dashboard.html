@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Procurement Tracker — Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="brand-mark">PT</span> Procurement Tracker</div>
+    <button id="logout-btn" class="btn btn-ghost">Log out</button>
+  </div>
+
+  <main class="page">
+    <div class="page-header">
+      <h1>Projects</h1>
+      <button id="add-project-btn" class="btn btn-primary">+ New project</button>
+    </div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <h2>No projects yet</h2>
+      <p>Create your first project to start tracking RFQs.</p>
+    </div>
+
+    <div id="project-grid" class="project-grid"></div>
+  </main>
+
+  <dialog id="project-modal">
+    <form id="project-form" class="modal-body" method="dialog">
+      <h2>New project</h2>
+      <div class="field">
+        <label for="project-name">Project name</label>
+        <input type="text" id="project-name" placeholder="e.g. Warehouse Racking System" required />
+      </div>
+      <div class="field">
+        <label for="project-sent-date">Sent date</label>
+        <input type="date" id="project-sent-date" required />
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="cancel-project-btn" class="btn btn-outline">Cancel</button>
+        <button type="submit" class="btn btn-primary">Create project</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
